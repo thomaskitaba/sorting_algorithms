@@ -36,14 +36,7 @@ while (head_o)
             {
                 head_i->prev = NULL;
                 head_i->next = head_i->prev;
-
             }
-
-
-
-
-
-
             print_list(head);
             head_i = head_i->prev;
         }
