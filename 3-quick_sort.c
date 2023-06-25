@@ -42,7 +42,7 @@ int partition(int arr[], int low, int high) {
 }
 
 void quick_sort_recursion(int arr[], int low, int high) {
-    if (low < high) {
+    if (low > high) {
         int pivot_index = partition(arr, low, high);
 
         quick_sort_recursion(arr, low, pivot_index - 1);
