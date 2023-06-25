@@ -2,8 +2,8 @@
 /**
 * merge_sorted_arrays - merge_sorted_arrays
 * @array: original array
-* @l:  left most index
-* @r: right most index
+* @l:  left index
+* @r: right index
 * @m: middle index
 * Return: Nothing
 */
@@ -18,44 +18,45 @@ int right_a[right_length];
 
 for (i = 0; i < left_length; i++)
 {
-    left_a[i] = array[l + i];
+	left_a[i] = array[l + i];
 }
 for (i = 0; i < right_length; i++)
 {
-    right_a[i] = array[m + i + 1];
+	right_a[i] = array[m + i + 1];
 }
 for (i = j = k = 0; k <= r; k++)
 {
-    if ((i < left_length) && (j >= right_length || left_a[i] < right_a[j]))
-    {
-        array[k] = left_a[i];
-        i++;
-    }
-    else
-    {
-        array[k] = right_a[j];
-        j++;
-    }
+	if ((i < left_length) && (j >= right_length || left_a[i] < right_a[j]))
+	{
+		array[k] = left_a[i];
+		i++;
+	}
+	else
+	{
+		array[k] = right_a[j];
+		j++;
+	}
 
 }
 }
 /**
 * merge_sort_recursion - merge_sort_recursion
-* @array: array
-* @size: size  of array
+* @array: array to divide in half
+* @l: left
+* @r: right
 */
 void merge_sort_recursion(int *array, int l, int r)
 {
-/* step 1: devide the array in to half*/
-    int m;
-    if (l < r)
-    {
-        m = (l + (r - 1)) / 2;
-        merge_sort_recursion(array, l, m);
-        merge_sort_recursion(array, m + 1, r);
+	int m;
 
-        merge_sorted_arrays(array, l, m, r);
-    }
+	if (l < r)
+	{
+		m = (l + (r - 1)) / 2;
+		merge_sort_recursion(array, l, m);
+		merge_sort_recursion(array, m + 1, r);
+
+		merge_sorted_arrays(array, l, m, r);
+	}
 }
 
 /**
