@@ -36,7 +36,6 @@ for (i = j = k = 0; k <= r; k++)
 		array[k] = right_a[j];
 		j++;
 	}
-
 }
 }
 /**
