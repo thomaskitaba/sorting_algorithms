@@ -1,8 +1,8 @@
 #include "sort.h"
 /**
 * swap_ints - bubble sort
-* @array: array
-* @size: size  of array
+* @a: a
+* @b: b
 */
 
 void swap_ints(int *a, int *b)
