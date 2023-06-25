@@ -1,8 +1,9 @@
 #include "sort.h"
 /**
-* bubble_sort - bubble sort
+* get_max - get_max
 * @array: array
-* @size: size  of array
+* @size: size
+* Return: max integer
 */
 
 int get_max(int *array, int size)
